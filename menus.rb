@@ -19,6 +19,17 @@ class Menus
     opt = opt.to_i
     return opt
   end
-
+  def menu_cliente
+    system('clear')
+    puts "MENU CLIENTES".center(50,'=')
+    print "\n\n"
+    puts "\t1.- Nuevo Cliente \n\t"
+    puts "\t2.- Mostrar Clientes\n\t"
+    puts "\t3.- Salir"
+    print '\n\n\tIngrese una opcion: '
+    opt=gets.chomp
+    opt = opt.to_i
+    return opt
+  end
 
 end
