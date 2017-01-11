@@ -31,5 +31,17 @@ class Menus
     opt = opt.to_i
     return opt
   end
+  def menu_producto
+    system('clear')
+    puts "MENU PRODUCTOS".center(50,'=')
+    print "\n\n"
+    puts "\t1.- Nuevo Producto \n\t"
+    puts "\t2.- Mostrar Productos\n\t"
+    puts "\t3.- Salir"
+    print '\n\n\tIngrese una opcion: '
+    opt=gets.chomp
+    opt = opt.to_i
+    return opt
+  end
 
 end
