@@ -4,7 +4,7 @@ class Producto
     @descripcion = descrip
     @precio = precio
   end
-  attr_accessor :nombre
+  attr_accessor :codigo
   attr_accessor :descripcion
   attr_accessor :precio
 end
