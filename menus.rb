@@ -14,7 +14,7 @@ class Menus
     puts "\t2.- Menu Producto \n\t"
     puts "\t3.- Menu venta \n\t"
     puts "\t4.- Salir"
-    print '\n\n\tIngrese una opcion: '
+    print "\n\n\tIngrese una opcion: "
     opt=gets.chomp
     opt = opt.to_i
     return opt
@@ -26,7 +26,7 @@ class Menus
     puts "\t1.- Nuevo Cliente \n\t"
     puts "\t2.- Mostrar Clientes\n\t"
     puts "\t3.- Salir"
-    print '\n\n\tIngrese una opcion: '
+    print "\n\n\tIngrese una opcion: "
     opt=gets.chomp
     opt = opt.to_i
     return opt
@@ -38,7 +38,7 @@ class Menus
     puts "\t1.- Nuevo Producto \n\t"
     puts "\t2.- Mostrar Productos\n\t"
     puts "\t3.- Salir"
-    print '\n\n\tIngrese una opcion: '
+    print "\n\n\tIngrese una opcion: "
     opt=gets.chomp
     opt = opt.to_i
     return opt
@@ -50,7 +50,7 @@ class Menus
     puts "\t1.- Nueva Venta\n\t"
     puts "\t2.- Mostrar Ventas\n\t"
     puts "\t3.- Salir"
-    print '\n\n\tIngrese una opcion: '
+    print "\n\n\tIngrese una opcion: "
     opt=gets.chomp
     opt = opt.to_i
     return opt
