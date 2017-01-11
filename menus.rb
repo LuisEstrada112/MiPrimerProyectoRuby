@@ -43,5 +43,16 @@ class Menus
     opt = opt.to_i
     return opt
   end
-
+  def menu_venta
+    system('clear')
+    puts "MENU VENTA".center(50,'=')
+    print "\n\n"
+    puts "\t1.- Nueva Venta\n\t"
+    puts "\t2.- Mostrar Ventas\n\t"
+    puts "\t3.- Salir"
+    print '\n\n\tIngrese una opcion: '
+    opt=gets.chomp
+    opt = opt.to_i
+    return opt
+  end
 end
