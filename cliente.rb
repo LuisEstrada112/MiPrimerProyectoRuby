@@ -17,6 +17,24 @@ class Cliente
     end
     gets()
   end
+  def ingresar_cliente (clientes)
+    system('clear')
+    puts "INGRESO DE CLIENTES".center(50,'=')
+    print "\n\n\tCodigo de cliente: "
+    cantidad=clientes.size()+1
+    cantidad=cantidad.to_s
+    largo=0-cantidad.length
+    codigo="C000"
+    codigo[largo,2]=cantidad
+    print codigo
+    print "\n\n\tIngrese nombre del cliente: "
+    nombre=gets.chomp
+    print "\n\n\tIngrese direccion del cliente: "
+    direccion=gets.chomp
+    clie = Cliente.new(codigo,nombre,direccion)
+    clientes=clientes.push(clie)
+  end
+
   attr_accessor :codigo
   attr_accessor :nombre
   attr_accessor :direccion
