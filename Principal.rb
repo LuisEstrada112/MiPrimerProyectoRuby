@@ -31,6 +31,14 @@ until opt==4 do
   opt=men.menu_principal
 
   if opt==1 then
+    until opt_cliente==3 do
+      opt_cliente=men.menu_cliente
+      case opt_cliente
+        when 1 then cliente.ingresar_cliente(clientes)
+        when 2 then cliente.mostrar_clientes(clientes)
+        else
+      end
+    end
   elsif opt==2 then
   elsif opt ==3 then
     puts "Eligio venta"
