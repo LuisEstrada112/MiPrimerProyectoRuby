@@ -40,6 +40,14 @@ until opt==4 do
       end
     end
   elsif opt==2 then
+    until opt_producto==3 do
+      opt_producto=men.menu_producto
+      case opt_producto
+        when 1 then producto.ingresar_producto(productos)
+        when 2 then producto.mostrar_productos(productos)
+        else
+      end
+    end
   elsif opt ==3 then
     puts "Eligio venta"
   elsif opt == 4 then
