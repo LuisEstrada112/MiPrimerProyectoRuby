@@ -7,11 +7,10 @@ class Venta
     @cliente=cliente
     @producto=producto
     @cantidad=cantidad
-    precio=0
     @igv=igv
     @total=total
   end
-  def realizar_venta(ventas, clientes, productos)
+  def realizar_venta(ventas, productos)
     @prec
     system('clear')
     puts "VENTA DE PRODUCTOS".center(50,'=')
@@ -35,9 +34,8 @@ class Venta
         @prec=prod.precio
       end
     end
-    @prec
     print "\n\n\tEl precio del producto es: #{@prec}"
-    subtotal=precio* cantidad
+    subtotal=@prec* cantidad
     igv=subtotal*0.18
     print "\n\n\tEl IGV a cobrar es: #{igv}"
     total=subtotal+igv
@@ -47,6 +45,26 @@ class Venta
     gets
   end
   def mostrar_ventas(ventas, clientes, productos)
+    system('clear')
+    puts "RELACION DE VENTAS".center(100,'=')
+    ventas.each do |vent|
+      print vent.codigo.ljust(8)
+      print vent.cliente.ljust(8)
+      clientes.each do |clie|
+        if vent.cliente==clie.codigo then
+          print clie.nombre.ljust(15)
+        end
+      end
+      productos.each do |prod|
+        if prod.codigo==vent.producto then
+          print prod.descripcion.ljust(25)
+        end
+      end
+      print vent.cantidad.to_s.rjust(10)
+      print vent.igv.to_s.rjust(10)
+      puts vent.total.to_s.rjust(10)
+    end
+    gets()
 
   end
 
@@ -55,7 +73,6 @@ class Venta
   attr_accessor :producto
   attr_accessor :producto
   attr_accessor :cantidad
-  attr_accessor :precio
   attr_accessor :igv
   attr_accessor :total
 
