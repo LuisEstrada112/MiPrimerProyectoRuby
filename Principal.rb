@@ -3,7 +3,8 @@ require_relative 'cliente.rb'
 require_relative 'producto.rb'
 require_relative 'venta.rb'
 
-
+ventas=[]
+venta=Venta.new()
 
 
 cliente=Cliente.new('C001','Luis','Santa Anita')
@@ -27,6 +28,7 @@ men = Menus.new()
 opt=0
 opt_cliente=0
 opt_producto=0
+opt_venta=0
 until opt==4 do
   opt=men.menu_principal
 
@@ -49,9 +51,14 @@ until opt==4 do
       end
     end
   elsif opt ==3 then
-    puts "Eligio venta"
-  elsif opt == 4 then
-    puts "Eligio Salir"
+    until opt_venta==3 do
+      opt_venta=men.menu_venta
+      case opt_venta
+        when 1 then venta.realizar_venta(ventas,productos)
+        when 2 then venta.mostrar_ventas(ventas, clientes, productos)
+        else
+      end
+    end
   end
 end
 
