@@ -29,6 +29,8 @@ class Venta
     cantidad=gets.chomp
     cantidad=cantidad.to_f
 
+
+
     productos.each do |prod|
       if prod.codigo==producto then
         @prec=prod.precio
@@ -61,6 +63,10 @@ class Venta
         end
       end
       print vent.cantidad.to_s.rjust(10)
+#      NumberFormat formatter = new DecimalFormat{"#0.00"}
+
+#      print formatter.format(vent.igv).to_s.rjust(10)
+#      print formatter.format(vent.total).to_s.rjust(10)
       print vent.igv.to_s.rjust(10)
       puts vent.total.to_s.rjust(10)
     end
